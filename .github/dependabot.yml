@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/Simple-dotnet8/Simple-dotnet8"
+    schedule:
+      interval: "daily"
+      time: "07:35"  # Approximate time in 24-hour format, UTC is the default timezone
+    allow:
+      - dependency-name: "VideoOS.Common.Crypto"
