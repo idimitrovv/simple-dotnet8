@@ -4,6 +4,6 @@ updates:
     directory: "/Simple-dotnet8/Simple-dotnet8"
     schedule:
       interval: "daily"
-      time: "07:35"  # Approximate time in 24-hour format, UTC is the default timezone
+      time: "14:07"  # Approximate time in 24-hour format, UTC is the default timezone
     allow:
       - dependency-name: "VideoOS.Common.Crypto"
