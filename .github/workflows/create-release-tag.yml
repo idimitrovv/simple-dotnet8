@@ -45,3 +45,11 @@ jobs:
 
           git tag -a $TAG -m "version $TAG"
           git push origin $TAG
+          
+  build-and-publish:
+    name: Build and Publish
+    needs: [create-release-tag]
+    uses: ./.github/workflows/build-and-publish.yml
+    with:
+      version: 1.5.3
+    secrets: inherit

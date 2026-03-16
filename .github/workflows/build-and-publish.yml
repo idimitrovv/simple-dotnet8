@@ -1,9 +1,12 @@
 name: Buid and Publish
 on: 
   pull_request:
-  push:
-    tags:
-      - '*'
+  workflow_call:
+    inputs:
+      version:
+        description: 'Release version (SemVer, e.g. 1.2.3)'
+        required: true
+        type: string
   workflow_dispatch:
 
 jobs:
@@ -18,3 +21,5 @@ jobs:
         run: |
           echo "It's a job for learning purposes"
           Write-Host "${{ github.ref_name }}"
+          Write-Host "${{ github.event_name }}"
+          Write-Host "${{ inputs.version }}"
