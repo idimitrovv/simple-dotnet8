@@ -51,5 +51,5 @@ jobs:
     needs: [create-release-tag]
     uses: ./.github/workflows/build-and-publish.yml
     with:
-      version: 1.5.3
+      version: ${{ github.event.inputs.version }}
     secrets: inherit
